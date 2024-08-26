@@ -1,5 +1,6 @@
 object tom {
 	
+	var energia = 0
 	//Completar! Pueden aparecer variables y métodos nuevos!
 	 
 	method comer(raton) {
