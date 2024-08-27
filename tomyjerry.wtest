@@ -1,0 +1,31 @@
+import tomyjerry.*
+
+describe "tom" {
+    test "tom varía la velocidad al comer y correr" {
+        assert.equals(10, tom.velocidadMaxima())
+        tom.comer(jerry)
+        assert.equals(15.2, tom.velocidadMaxima())
+        tom.correr(24)
+        assert.equals(14, tom.velocidadMaxima())
+        tom.comer(nibbles)
+        assert.equals(18.7, tom.velocidadMaxima())
+        jerry.edad(3)
+        tom.comer(jerry)
+        assert.equals(25.9, tom.velocidadMaxima())
+        tom.correr(38)
+        assert.equals(24, tom.velocidadMaxima())
+        
+    }
+
+    test "poder y querer comer de tom" {
+        assert.notThat(tom.puedeComer(jerry, 120))
+        assert.notThat(tom.quiereComer(jerry, 120))
+        
+        assert.that(tom.puedeComer(nibbles, 96))
+        assert.notThat(tom.quiereComer(nibbles, 96))
+
+        assert.that(tom.puedeComer(nibbles, 96))
+        assert.that(tom.quiereComer(nibbles, 60))
+
+    }
+}
