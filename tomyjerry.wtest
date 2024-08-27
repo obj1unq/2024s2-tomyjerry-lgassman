@@ -1,6 +1,12 @@
 import tomyjerry.*
 
 describe "tom" {
+
+    // method initialize(){
+    //     //Este metodo es opcional para armar el escenario
+    //     //antes de cada test
+    // }
+
     test "tom varía la velocidad al comer y correr" {
         assert.equals(10, tom.velocidadMaxima())
         tom.comer(jerry)
